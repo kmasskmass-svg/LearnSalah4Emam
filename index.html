@@ -12,10 +12,10 @@
 <meta name="apple-mobile-web-app-title" content="موسوعة الصلاة">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta property="og:image" content="og-image.png">
+<meta property="og:image" content="https://kmasskmass-svg.github.io/LearnSalah4Emam/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:image" content="https://kmasskmass-svg.github.io/LearnSalah4Emam/og-image.png"><meta property="og:url" content="https://kmasskmass-svg.github.io/LearnSalah4Emam/">
 <meta property="og:type" content="book">
 <meta property="og:title" content="موسوعة الصلاة في المذاهب الأربعة">
 <meta property="og:description" content="صفة الصلاة من النية إلى التسليم، بقول كل مذهب ودليله وتعليله وجوابه عن مخالفه، موثَّقًا بالجزء والصفحة — جمع وإعداد: كليب بن أحمد بن ضيف الله الزهراني">
@@ -468,12 +468,25 @@ button, a, abbr{-webkit-tap-highlight-color:rgba(134,103,31,.15)}
   body.toc-open .shade{top:58px; right:0; bottom:0; left:0}
   .hero::before, .opener::before{top:0; right:0; bottom:0; left:0}
 }
+
+/* زر الكتاب PDF ظاهر دائمًا في الشريط العلوي */
+#bPdf{border-color:var(--gold); color:var(--gold); font-weight:700; text-decoration:none; font-size:14px}
+#bPdf:hover{background:var(--cream)}
+@media (max-width:760px){ #bPdf .pw{display:none} }
+@media (max-width:420px){
+  .bar{gap:4px; padding:0 8px}
+  .bar .ib{min-width:34px; padding:0 7px}
+  #bPdf svg{display:none}
+  .bar .ttl{font-size:19px}
+}
+@media (max-width:340px){ .bar .ttl{font-size:17px} }
 </style>
 </head>
 <body>
 <div class="bar">
   <button class="ib" id="bToc" aria-label="الفهرس" title="الفهرس (اضغطه على الحاسوب لطيّه)"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <a class="ttl" href="#home">موسوعة الصلاة<span class="tsub"> في المذاهب الأربعة</span></a>
+  <a class="ib" id="bPdf" href="mawsuat-alsalah.pdf" target="_blank" rel="noopener" title="الكتاب كاملًا PDF (٧٢٥ صفحة)" aria-label="الكتاب كاملًا PDF"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4 9.5 4 12 5.5v14C9.5 18 6.5 18 4 19.5zM20 5.5C17.5 4 14.5 4 12 5.5v14c2.5-1.5 5.5-1.5 8 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span><span class="pw">الكتاب </span>PDF</span></a>
   <button class="ib" id="bSearch" aria-label="بحث" title="بحث"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   <button class="ib" id="bMadh" aria-label="المذاهب" title="تصفية المذاهب">المذاهب</button>
   <button class="ib only-wide" id="bCmp" aria-pressed="false" title="عرض المذاهب متجاورة">مقارنة</button>
